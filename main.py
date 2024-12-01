@@ -1,3 +1,4 @@
+from colors import error_color, reset
 class Account:
     def __init__(self, account_type, id, balance=0.0):
         self.account_type = account_type  # 'checking', 'savings', etc.
@@ -9,13 +10,13 @@ class Account:
         if amount > 0:
             self.balance += amount
         else:
-            print("Deposit amount must be positive.")
+            print(f"{error_color}Deposit amount must be positive.{reset}")
 
     def withdraw(self, amount):
         if 0 < amount <= self.balance:
             self.balance -= amount
         else:
-            print("Invalid withdrawal amount.")
+            print(f"{error_color}Invalid withdrawal amount.{reset}")
 
     def compound(self):
         self.balance *= self.rate
@@ -41,18 +42,18 @@ class User:
             if 0 <= ind < len(self.accounts):
                 self.accounts[ind].deposit(amount)
             else:
-                print("Invalid account index.")
+                print(f"{error_color}Invalid account index.{reset}")
         except Exception as e:
-            print(f"Error occurred: {e}")
+            print(f"{error_color}Error occurred: {e}{reset}")
 
     def withdraw(self, amount, ind):
         try:
             if 0 <= ind < len(self.accounts):
                 self.accounts[ind].withdraw(amount)
             else:
-                print("Invalid account index.")
+                print(f"{error_color}Invalid account index.{reset}")
         except Exception as e:
-            print(f"Error occurred: {e}")
+            print(f"{error_color}Error occurred: {e}{reset}")
 
     def get_accounts(self):
         print(f"{self.firstname} {self.lastname}")
@@ -91,7 +92,7 @@ def main():
                 amount = float(input("Enter amount to deposit: "))
                 clients[user_index].deposit(amount, account_index)
             else:
-                print("Invalid user index.")
+                print(f"{error_color}Invalid user index.{reset}")
         elif action == "2":
             user_index = int(input("Enter user index: "))
             print()
@@ -100,19 +101,19 @@ def main():
                 amount = float(input("Enter amount to withdraw: "))
                 clients[user_index].withdraw(amount, account_index)
             else:
-                print("Invalid user index.")
+                print(f"{error_color}Invalid user index.{reset}")
         elif action == "3":
             user_index = int(input("Enter user index: "))
             print()
             if 0 <= user_index < len(clients):
                 clients[user_index].get_accounts()
             else:
-                print("Invalid user index.")
+                print(f"{error_color}Invalid user index.{reset}")
         elif action == "4":
             print("Exiting the system.")
             break
         else:
-            print("Invalid choice. Please try again.")
+            print(f"{error_color}Invalid choice. Please try again.{reset}")
 
 # Call the main function to start the program
 main()
