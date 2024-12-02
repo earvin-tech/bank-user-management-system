@@ -26,46 +26,55 @@ class Account:
 
 class User:
     def __init__(self, firstname, lastname, dobm, dobd, doby):
-        self.firstname = firstname
-        self.lastname = lastname
-        self.dobm = dobm
-        self.dobd = dobd
-        self.doby = doby
-        self.accounts = []
+        # Initialize a user with first name, last name, and date of birth (month, day, year)
+        self.firstname = firstname  # First name of the user
+        self.lastname = lastname  # Last name of the user
+        self.dobm = dobm  # Month of the user's date of birth
+        self.dobd = dobd  # Day of the user's date of birth
+        self.doby = doby  # Year of the user's date of birth
+        self.accounts = []  # List to store the user's accounts (checking/savings)
 
     def add_account(self, account_type, id):
-        account = Account(account_type, id)
-        self.accounts.append(account)
+        # Adds a new account (either 'checking' or 'savings') to the user's accounts
+        account = Account(account_type, id)  # Create a new account instance
+        self.accounts.append(account)  # Add the account to the user's accounts list
 
     def deposit(self, amount, ind):
+        # Deposits a specified amount into the user's account at the given index
         try:
-            if 0 <= ind < len(self.accounts):
-                self.accounts[ind].deposit(amount)
+            if 0 <= ind < len(self.accounts):  # Check if the account index is valid
+                self.accounts[ind].deposit(amount)  # Perform the deposit
             else:
-                print(f"{error_color}Invalid account index.{reset}")
+                print(f"{error_color}Invalid account index.{reset}")  # Invalid index message
         except Exception as e:
+            # Handle any exceptions during the deposit process
             print(f"{error_color}Error occurred: {e}{reset}")
 
     def withdraw(self, amount, ind):
+        # Withdraws a specified amount from the user's account at the given index
         try:
-            if 0 <= ind < len(self.accounts):
-                self.accounts[ind].withdraw(amount)
+            if 0 <= ind < len(self.accounts):  # Check if the account index is valid
+                self.accounts[ind].withdraw(amount)  # Perform the withdrawal
             else:
-                print(f"{error_color}Invalid account index.{reset}")
+                print(f"{error_color}Invalid account index.{reset}")  # Invalid index message
         except Exception as e:
+            # Handle any exceptions during the withdrawal process
             print(f"{error_color}Error occurred: {e}{reset}")
 
     def get_accounts(self):
-        print(f"{self.firstname} {self.lastname}")
+        # Prints all the user's accounts with details
+        print(f"{self.firstname} {self.lastname}")  # Display the user's name
         for account in self.accounts:
+            # Display each account with corresponding color based on account type
             if account.account_type == "savings":
                 print(f"{saving_account_color}{account}{reset}")
             elif account.account_type == "checking":
                 print(f"{checking_account_color}{account}{reset}")
 
     def compound_accounts(self):
+        # Applies the interest rate to all the user's accounts
         for account in self.accounts:
-            account.compound()
+            account.compound()  # Call the compound method for each account
 
 # Initialize empty list to store clients' classes
 clients = []
