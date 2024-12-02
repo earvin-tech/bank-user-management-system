@@ -1,25 +1,25 @@
 from colors import error_color, reset, checking_account_color, saving_account_color, propmt_color, successful_input_color
 class Account:
-    def __init__(self, account_type, id, balance=0.0):
+    def __init__(self, account_type, id, balance=0.0): # initialising the parameters of the class
         self.account_type = account_type  # 'checking', 'savings', etc.
         self.balance = balance
         self.id = id
-        self.rate = 1.03 if account_type == 'checking' else 1.05
+        self.rate = 1.03 if account_type == 'checking' else 1.05 # rates for checking and savings accounts
 
     def deposit(self, amount): 
-        if amount > 0:
+        if amount > 0:  # checks for valid deposit amount, must be positive
             self.balance += amount
         else:
-            print(f"{error_color}Deposit amount must be positive.{reset}")
+            print(f"{error_color}Deposit amount must be positive.{reset}") # prints if not valid
 
     def withdraw(self, amount):
-        if 0 < amount <= self.balance:
+        if 0 < amount <= self.balance: # checks for valid withdrawl amount, must be positive
             self.balance -= amount
         else:
-            print(f"{error_color}Invalid withdrawal amount.{reset}")
+            print(f"{error_color}Invalid withdrawal amount.{reset}") # prints if not valid amount
 
     def compound(self):
-        self.balance *= self.rate
+        self.balance *= self.rate # assigns rate to account
 
     def __str__(self):
         return f"ID: {self.id} {self.account_type.capitalize()} Account: ${self.balance:.2f}"
