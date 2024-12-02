@@ -1,4 +1,4 @@
-from colors import error_color, reset
+from colors import error_color, reset, checking_account_color, saving_account_color
 class Account:
     def __init__(self, account_type, id, balance=0.0):
         self.account_type = account_type  # 'checking', 'savings', etc.
@@ -58,7 +58,10 @@ class User:
     def get_accounts(self):
         print(f"{self.firstname} {self.lastname}")
         for account in self.accounts:
-            print(account)
+            if account.account_type == "savings":
+                print(f"{saving_account_color}{account}{reset}")
+            elif account.account_type == "checking":
+                print(f"{checking_account_color}{account}{reset}")
 
     def compound_accounts(self):
         for account in self.accounts:
