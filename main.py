@@ -85,18 +85,18 @@ clients[2].add_account('savings', '000006')
 # Main program function
 def main():
     while True:
-        action = input(f"{propmt_color}Choose an action:{reset}\n(1) Deposit (2) Withdraw (3) Show Accounts (4) Exit:\n")
+        action = input(f"{propmt_color}Choose an action:{reset}\n(1) Deposit (2) Withdraw (3) Show Accounts (4) Exit:\n") # Asks user to choose action from main menu
         print()
-        if action == "1":
+        if action == "1": # Selecting 1 is to deposit
             user_index = int(input(f"{propmt_color}Enter user index:{reset} "))  # Limit user input to existing users
             print()
-            if 0 <= user_index < len(clients):
-                account_index = int(input(f"{propmt_color}Enter account index (0 for checking, 1 for savings):{reset}"))
-                amount = float(input(f"\n{propmt_color}Enter amount to deposit:{reset} "))
-                clients[user_index].deposit(amount, account_index)
-                print(f"\n{successful_input_color}Deposit successful{reset}\n")
+            if 0 <= user_index < len(clients): # Checks for valid user within the index of all users
+                account_index = int(input(f"{propmt_color}Enter account index (0 for checking, 1 for savings):{reset}")) # Asks for checking or savings account to deposit into
+                amount = float(input(f"\n{propmt_color}Enter amount to deposit:{reset} ")) # Asks for amount to deposit from user
+                clients[user_index].deposit(amount, account_index) # For the relevant user index adds the amount into the account specified before in the inputs
+                print(f"\n{successful_input_color}Deposit successful{reset}\n") # Print if successful
             else:
-                print(f"{error_color}Invalid user index.{reset}\n")
+                print(f"{error_color}Invalid user index.{reset}\n") # Prints if invalid user index is entered by user, returns to main menu.
         elif action == "2":
             user_index = int(input(f"{propmt_color}Enter user index:{reset} "))
             print()
