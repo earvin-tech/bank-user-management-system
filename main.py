@@ -1,4 +1,4 @@
-from colors import error_color, reset
+from colors import error_color, reset, checking_account_color, saving_account_color, propmt_color, successful_input_color
 class Account:
     def __init__(self, account_type, id, balance=0.0):
         self.account_type = account_type  # 'checking', 'savings', etc.
@@ -6,7 +6,7 @@ class Account:
         self.id = id
         self.rate = 1.03 if account_type == 'checking' else 1.05
 
-    def deposit(self, amount):
+    def deposit(self, amount): 
         if amount > 0:
             self.balance += amount
         else:
@@ -58,7 +58,10 @@ class User:
     def get_accounts(self):
         print(f"{self.firstname} {self.lastname}")
         for account in self.accounts:
-            print(account)
+            if account.account_type == "savings":
+                print(f"{saving_account_color}{account}{reset}")
+            elif account.account_type == "checking":
+                print(f"{checking_account_color}{account}{reset}")
 
     def compound_accounts(self):
         for account in self.accounts:
@@ -82,28 +85,28 @@ clients[2].add_account('savings', '000006')
 # Main program function
 def main():
     while True:
-        action = input("Choose an action: (1) Deposit (2) Withdraw (3) Show Accounts (4) Exit:\n")
+        action = input(f"{propmt_color}Choose an action:{reset}\n (1) Deposit (2) Withdraw (3) Show Accounts (4) Exit:\n")
         print()
         if action == "1":
-            user_index = int(input("Enter user index: "))  # Limit user input to existing users
+            user_index = int(input(f"{propmt_color}Enter user index:{reset} "))  # Limit user input to existing users
             print()
             if 0 <= user_index < len(clients):
-                account_index = int(input("Enter account index (0 for checking, 1 for savings): "))
-                amount = float(input("Enter amount to deposit: "))
+                account_index = int(input(f"{propmt_color}Enter account index (0 for checking, 1 for savings):{reset}"))
+                amount = float(input(f"{propmt_color}Enter amount to deposit:{reset} "))
                 clients[user_index].deposit(amount, account_index)
             else:
                 print(f"{error_color}Invalid user index.{reset}")
         elif action == "2":
-            user_index = int(input("Enter user index: "))
+            user_index = int(input(f"{propmt_color}Enter user index:{reset} "))
             print()
             if 0 <= user_index < len(clients):
-                account_index = int(input("Enter account index (0 for checking, 1 for savings): "))
-                amount = float(input("Enter amount to withdraw: "))
+                account_index = int(input(f"{propmt_color}Enter account index (0 for checking, 1 for savings):{reset} "))
+                amount = float(input(f"{propmt_color}Enter amount to withdraw:{reset} "))
                 clients[user_index].withdraw(amount, account_index)
             else:
                 print(f"{error_color}Invalid user index.{reset}")
         elif action == "3":
-            user_index = int(input("Enter user index: "))
+            user_index = int(input(f"{propmt_color}Enter user index:{reset} "))
             print()
             if 0 <= user_index < len(clients):
                 clients[user_index].get_accounts()
