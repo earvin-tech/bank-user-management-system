@@ -109,25 +109,25 @@ def main():
         elif action == "2":
             user_index = int(input(f"{propmt_color}Enter user index:{reset} "))
             print()
-            if 0 <= user_index < len(clients):
-                account_index = int(input(f"{propmt_color}Enter account index (0 for checking, 1 for savings):{reset} "))
-                amount = float(input(f"\n{propmt_color}Enter amount to withdraw:{reset} "))
-                clients[user_index].withdraw(amount, account_index)
-                print(f"\n{successful_input_color}Withdrawal successful{reset}\n")
+            if 0 <= user_index < len(clients): # Checks for valid user within the index of all users
+                account_index = int(input(f"{propmt_color}Enter account index (0 for checking, 1 for savings):{reset} ")) # Asks user checking or savings
+                amount = float(input(f"\n{propmt_color}Enter amount to withdraw:{reset} ")) # Asks for amount to withdraw from user
+                clients[user_index].withdraw(amount, account_index) # For the relevant user index removes the amount from the account specified before in the inputs
+                print(f"\n{successful_input_color}Withdrawal successful{reset}\n") # Prints if valid withdrawal
             else:
-                print(f"{error_color}Invalid user index.{reset}\n")
-        elif action == "3":
-            user_index = int(input(f"{propmt_color}Enter user index:{reset} "))
+                print(f"{error_color}Invalid user index.{reset}\n") # Prints if invalid user index
+        elif action == "3": # If user wants to see accounts
+            user_index = int(input(f"{propmt_color}Enter user index:{reset} ")) # Asks user for account index
             print()
-            if 0 <= user_index < len(clients):
-                clients[user_index].get_accounts()
+            if 0 <= user_index < len(clients): # checks for valid index within index of all users
+                clients[user_index].get_accounts() # calls get_accounts method
             else:
-                print(f"{error_color}Invalid user index.{reset}\n")
+                print(f"{error_color}Invalid user index.{reset}\n") # Prints if user index input is invalid
         elif action == "4":
-            print("Exiting the system.")
+            print(f"{successful_input_color}Exiting the system.{reset}") # Prints after successful exit of app
             break
         else:
-            print(f"{error_color}Invalid choice. Please try again.{reset}")
+            print(f"{error_color}Invalid choice. Please try again.{reset}") # Prints if user inputs invalid choice
 
 # Call the main function to start the program
 main()
