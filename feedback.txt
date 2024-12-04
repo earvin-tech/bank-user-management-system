@@ -33,3 +33,4 @@ Action required:
 - Explanation of packages
 - Blurb for functions
 - Put comments on top of code instead of beside code.
+- Add more security to accounts to fix ethical concerns.
