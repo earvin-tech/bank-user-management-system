@@ -35,9 +35,12 @@ class Account:
         if 0 < amount <= self.balance: 
             # Subtracts input amount from balance
             self.balance -= amount
+            # Prints if valid withdrawal
+            print(f"\n{successful_input_color}Withdrawal successful{reset}\n") 
         else:
             # Prints if not valid amount
-            print(f"{error_color}Invalid withdrawal amount.{reset}") 
+            print(f"\n{error_color}Invalid withdrawal amount.{reset}")
+             
 
     def compound(self):
         # Multiplies rate to account
@@ -171,8 +174,6 @@ def main():
                 amount = float(input(f"\n{propmt_color}Enter amount to withdraw:{reset} "))
                 # For the relevant user index removes the amount from the account specified before in the inputs
                 clients[user_index].withdraw(amount, account_index) 
-                # Prints if valid withdrawal
-                print(f"\n{successful_input_color}Withdrawal successful{reset}\n") 
             else:
                 # Prints if invalid user index
                 print(f"{error_color}Invalid user index.{reset}\n") 
