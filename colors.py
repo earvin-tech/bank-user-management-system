@@ -1,3 +1,7 @@
+'''
+The colored package is used to bring more color to the printed outputs of the app on the terminal. It helps to differentiate different outputs such as different accounts (savings or checking) and to highlight important prompts of inputs. 
+'''
+
 from colored import Fore, Back, Style # type: ignore
 
 # Different colors to call for printing on console
