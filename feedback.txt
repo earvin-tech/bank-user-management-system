@@ -1,0 +1,36 @@
+Feedback 
+
+1. 
+Feedback from: Ben Gorman
+What was checked: Code comments in main.py and colors.py
+Date: 3/12/2024
+
+**Feedback for Earvin/Declan**
+The quality of these notes are very high. The line by line level of detail that you go to makes understanding the application very easy. There are a few things I noticed that were missing or could be cleaned up. If you need anything else or have any questions, just let me know.  
+
+__Code Notes__
+None of the classes have explanations for what they are or do. 
+
+None of the packages have explanations for what they are or do. 
+
+These code notes could use a blurb at the top of the function explaining what the function intends to do and what the user would be using them for. Instead of simply putting “deposit method”, I’d explain what it does and how. 
+
+The convention in which the code comments are written is inconsistent. Having the comments on the right of the function means the reviewer has to read right to left. Conventionally comments go above the code it explains so that the user has an idea of what it is before they attempt to decipher it.
+
+
+#this is the class, it controls X user experience
+class Feedback
+#this function performs Y
+def examplefeedback(learning):
+#this is the first line of the code, it handles step Z
+self.feedback = feedback
+
+__Ethical Concerns__
+This application handles valuable assets of the user and their private information. While this data is clearly seeded as an example, if this application were real, it would require statements handling these concerns such as a privacy policy. Having an account number be all that is required to deposit or withdraw money is a clear security risk. I recommend doing a write up somewhere to explain these risks to the user before they use the application.
+
+Action required:
+- Explanation of classes 
+- Explanation of packages
+- Blurb for functions
+- Put comments on top of code instead of beside code.
+- Add more security to accounts to fix ethical concerns.
