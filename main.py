@@ -1,3 +1,4 @@
+#Import colors.py
 from colors import error_color, reset, checking_account_color, saving_account_color, propmt_color, successful_input_color
 
 '''
