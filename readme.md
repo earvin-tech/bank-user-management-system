@@ -46,8 +46,18 @@ The Bank User Management System is a Python application that allows users to man
   - Enter user index (e.g., 0 for John Doe) to display accounts.
 
 ## Dependencies
-- Python 3.x
+### Python 3.x
+
+### colored:
+  Official documentation: [colored](https://pypi.org/project/colored/)<br>
+  An external library for color and formatting in terminal. For this project it will help differentiate and highlight some important user prompts, messages for errors, successful operations and outputs.
+  
+
 
 ## Author
 [Declan Whitty](https://github.com/declan-whitty)# bank-user-management-system
+
+## Collaborators
+[Earvin Tumpao](https://github.com/earvin-tech)
+
 # bank-user-management-system
