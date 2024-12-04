@@ -1,4 +1,5 @@
 from colors import error_color, reset, checking_account_color, saving_account_color, propmt_color, successful_input_color
+
 '''
 The purpose of the account class is to store information such as balance of account, its ID, and account type. It's methods will perform operations on the balance.
 
