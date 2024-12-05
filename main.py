@@ -50,6 +50,24 @@ class Account:
         # When returning the instance f string returned
         return f"ID: {self.id} {self.account_type.capitalize()} Account: ${self.balance:.2f}" 
 
+'''
+The purpose of the User class is to store user information such as their name and date of birth, 
+and to manage their associated accounts. Users can perform operations on their accounts such as 
+adding accounts, depositing, withdrawing, viewing account details, and applying interest rates.
+
+Attributes:
+- firstname: First name of the user
+- lastname: Last name of the user
+- dobm, dobd, doby: Month, day, and year of the user's date of birth
+- accounts: A list storing the user's accounts
+
+Methods:
+- add_account: Creates and adds a new account (checking or savings) for the user
+- deposit: Deposits a specified amount into a specific user account
+- withdraw: Withdraws a specified amount from a specific user account
+- get_accounts: Displays all the user's accounts with details
+- compound_accounts: Applies interest rates to all the user's accounts
+'''
 class User:
     # Initialize a user with first name, last name, and date of birth (month, day, year)
     def __init__(self, firstname, lastname, dobm, dobd, doby):
@@ -63,65 +81,72 @@ class User:
         self.dobd = dobd  
         # Year of the user's date of birth
         self.doby = doby  
-         # List to store the user's accounts (checking/savings)
+        # List to store the user's accounts (checking/savings)
         self.accounts = [] 
 
-     # Adds a new account (either 'checking' or 'savings') to the user's accounts
+    '''
+    Adds a new account (either 'checking' or 'savings') to the user's accounts.
+
+    Parameters:
+    - account_type (str): The type of account to create ('checking' or 'savings').
+    - id (str): A unique identifier for the account.
+    '''
     def add_account(self, account_type, id):
-        # Create a new account instance
         account = Account(account_type, id)  
-        # Add the account to the user's accounts list
         self.accounts.append(account)  
-    # Deposits a specified amount into the user's account at the given index
+
+    '''
+    Deposits a specified amount into the user's account at the given index.
+
+    Parameters:
+    - amount (float): The amount to deposit.
+    - ind (int): The index of the account in the user's accounts list.
+    '''
     def deposit(self, amount, ind):
-        
         try:
-            # Check if the account index is valid
             if 0 <= ind < len(self.accounts):  
-                # Perform the deposit
                 self.accounts[ind].deposit(amount)  
             else:
-                # Invalid index message
                 print(f"{error_color}Invalid account index.{reset}")  
-        # Handle any exceptions during the deposit process
         except Exception as e:
-            
             print(f"{error_color}Error occurred: {e}{reset}")
 
-    # Withdraws a specified amount from the user's account at the given index
+    '''
+    Withdraws a specified amount from the user's account at the given index.
+
+    Parameters:
+    - amount (float): The amount to withdraw.
+    - ind (int): The index of the account in the user's accounts list.
+    '''
     def withdraw(self, amount, ind):
-        
         try:
-            # Check if the account index is valid
             if 0 <= ind < len(self.accounts):  
-                # Perform the withdrawal
                 self.accounts[ind].withdraw(amount)  
             else:
-                # Invalid index message
                 print(f"{error_color}Invalid account index.{reset}")  
-        # Handle any exceptions during the withdrawal process
         except Exception as e:
-            
             print(f"{error_color}Error occurred: {e}{reset}")
     
-    # Prints all the user's accounts with details
+    '''
+    Prints all the user's accounts with details.
+    Displays the user's name and each account's information with corresponding color
+    based on account type.
+    '''
     def get_accounts(self):
-        # Display the user's name
         print(f"{self.firstname} {self.lastname}")  
-        # Display each account with corresponding color based on account type
         for account in self.accounts:
-            
             if account.account_type == "savings":
                 print(f"{saving_account_color}{account}{reset}")
             elif account.account_type == "checking":
                 print(f"{checking_account_color}{account}{reset}")
 
-    # Applies the interest rate to all the user's accounts
+    '''
+    Applies the interest rate to all the user's accounts.
+    Calls the compound method on each account.
+    '''
     def compound_accounts(self):
-        
-        # Call the compound method for each account
         for account in self.accounts:
-            account.compound()  
+            account.compound()
 
 # Initialize empty list to store clients' classes
 clients = []
