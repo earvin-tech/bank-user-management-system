@@ -150,21 +150,29 @@ class User:
         for account in self.accounts:
             account.compound()
 
-# Helper functions for JSON
+# Helper function to load data from a JSON file
+# This function reads the contents of a specified JSON file.
+# If the file does not exist or contains invalid JSON, it handles the error gracefully.
 def load_data(filename):
     try:
         with open(filename, 'r') as file:
-            return json.load(file)
+            return json.load(file)  # Load and return the JSON data
     except FileNotFoundError:
-        return []
+        return []  # Return an empty list if the file does not exist
     except json.JSONDecodeError:
-        print("Error reading JSON file. Starting fresh.")
+        print("Error reading JSON file. Starting fresh.")  # Notify user of a JSON error
         return []
 
+# Helper function to save data to a JSON file
+# This function writes the provided data into a specified JSON file.
+# It ensures the JSON data is formatted for readability with indentation.
 def save_data(data, filename):
     with open(filename, 'w') as file:
-        json.dump(data, file, indent=4)
+        json.dump(data, file, indent=4)  # Save data to the file with indentation
 
+# Convert client objects into JSON-compatible data
+# This function takes a list of User objects and converts them into a format that can be saved as JSON.
+# Each user and their accounts are represented as nested dictionaries.
 def convert_clients_to_json(clients):
     json_data = []
     for client in clients:
@@ -186,10 +194,13 @@ def convert_clients_to_json(clients):
         json_data.append(client_data)
     return json_data
 
+# Convert JSON data back into client objects
+# This function takes a list of dictionaries from a JSON file and converts them into User objects with Account objects.
+# It handles cases where the JSON data might contain empty or invalid entries.
 def convert_json_to_clients(data):
     clients = []
     for user_data in data:
-        if user_data is None:
+        if user_data is None:  # Skip invalid or empty data
             continue
         user = User(
             user_data['firstname'],
@@ -204,21 +215,25 @@ def convert_json_to_clients(data):
                 account_data['id'],
                 account_data['balance']
             )
-            user.accounts.append(account)
+            user.accounts.append(account)  # Add accounts to the user
         clients.append(user)
     return clients
 
-# Load existing clients from a JSON file
+# Load existing client data from a JSON file
+# This step initializes the application with data from the 'users.json' file, if it exists.
 clients_data = load_data('users.json')
 clients = convert_json_to_clients(clients_data)
 
-# Main program function
+# Main function to run the banking application
+# This function provides a menu-driven interface for the user to interact with the application.
+# Users can perform actions like depositing, withdrawing, viewing accounts, adding new users, or exiting.
 def main():
     while True:
-        # Asks user to choose action from main menu
+        # Display menu options to the user
         action = input(f"{propmt_color}Choose an action:{reset}\n(1) Deposit (2) Withdraw (3) Show Accounts (4) Add User (5) Exit:\n") 
         print()
         if action == "1":
+            # Handle deposit operation
             if len(clients) == 0:
                 print(f"{error_color}No users available. Please add a user first.{reset}\n")
                 continue
@@ -232,6 +247,7 @@ def main():
             else:
                 print(f"{error_color}Invalid user index.{reset}\n") 
         elif action == "2":
+            # Handle withdrawal operation
             if len(clients) == 0:
                 print(f"{error_color}No users available. Please add a user first.{reset}\n")
                 continue
@@ -245,6 +261,7 @@ def main():
             else:
                 print(f"{error_color}Invalid user index.{reset}\n") 
         elif action == "3": 
+            # Handle displaying account information
             if len(clients) == 0:
                 print(f"{error_color}No users available.{reset}\n")
                 continue
@@ -256,6 +273,7 @@ def main():
             else:
                 print(f"{error_color}Invalid user index.{reset}\n") 
         elif action == "4":
+            # Add a new user to the system
             firstname = input(f"{propmt_color}Enter first name:{reset} ")
             lastname = input(f"{propmt_color}Enter last name:{reset} ")
             dobm = int(input(f"{propmt_color}Enter birth month (1-12):{reset} "))
@@ -265,11 +283,13 @@ def main():
             clients.append(new_user)
             print(f"\n{successful_input_color}User added successfully!{reset}\n")
         elif action == "5":
+            # Save data and exit the application
             print(f"{successful_input_color}Saving data...{reset}")
             save_data(convert_clients_to_json(clients), 'users.json')
             print(f"{successful_input_color}Data saved. Exiting the system.{reset}") 
             break
         else:
+            # Handle invalid menu selection
             print(f"{error_color}Invalid choice. Please try again.{reset}") 
 
 # Call the main function to start the program
