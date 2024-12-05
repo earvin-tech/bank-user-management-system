@@ -44,6 +44,8 @@ Date: 5/12/2024
      
 No action required from this feedback.
 
+
+=======
 3.
 Specific documentation checked: ReadMe and Code Comments for main.py and colors.py
 Feedback given to: Declan W & Earvin
@@ -58,3 +60,23 @@ I don't see this in your code comment but just make sure you add comments to the
 Actions to be complete:
 Update ReadMe to include installation for libararies / packages, dependencies and licenses and an ethical consideration & standards - since this a Bank Management system, you may want to consider the users privacy and look up PII
 Add code comments to classes and function explaining the purpose, returned result and parameter / arguements - for HD standar include code examples as well.
+>>>>>>> 4f9aa28ec3309b6f15ff8217226cc747fbd13992
+
+<<<<<<< HEAD
+4. 
+Feedback from: Chris
+What was checked: Both README and Code comments of main.py and colors.py
+Date: 6/12/2024
+    
+    This piece of feed back is attached as a pdf named 'Feedback_from_Chris.pdf' in the main directory.
+
+Action required:
+- More detail on features, breakdown each feature
+- Detail how to install each dependency and virtual environment (pip installs)
+- Add visual aids for example commands
+- Explain concept of 'user index' and 'account index'
+- Explain common errors
+- Security disclaimer
+
+
+
