@@ -46,7 +46,7 @@ No action required from this feedback.
 
 3.
 Specific documentation checked: ReadMe and Code Comments for main.py and colors.py
-Feedback given to: Declan W & 
+Feedback given to: Declan W & Earvin
 Feedback provided by: Tilley
 Date of feedback: 03/12/2024
 Feedback Provided: 
