@@ -1,18 +1,16 @@
 # Bank User Management System
 
 ## Table of contents
-- [Bank User Management System](#bank-user-management-system)
-  - [Table of contents](#table-of-contents)
-  - [Description](#description)
-  - [Features](#features)
-  - [Installation Instructions](#installation-instructions)
-  - [Usage Instructions](#usage-instructions)
-    - [Example Commands](#example-commands)
-  - [Dependencies](#dependencies)
-    - [Python 3.x:](#python-3x)
-    - [colored:](#colored)
-  - [Author](#author)
-  - [Collaborators](#collaborators)
+- [Description](#description)
+- [Features](#features)
+- [Installation Instructions](#installation-instructions)
+- [Usage Instructions](#usage-instructions)
+  - [Example Commands](#example-commands)
+- [Dependencies](#dependencies)
+  - [Python 3.x:](#python-3x)
+  - [colored:](#colored)
+- [Author](#author)
+- [Collaborators](#collaborators)
   
 
 ## Description

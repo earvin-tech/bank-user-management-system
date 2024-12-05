@@ -43,3 +43,21 @@ Date: 5/12/2024
      I had a look over your Main.py and Colors.py files. Your comments are very well structured and explain the functions, their purpose, and how they work. I couldn't find anything you could improve on as it is already really solid.
      
 No action required from this feedback.
+
+3. 
+Feedback from: Chris
+What was checked: Both README and Code comments of main.py and colors.py
+Date: 6/12/2024
+    
+    This piece of feed back is attached as a pdf named 'Feedback_from_Chris.pdf' in the main directory.
+
+Action required:
+- More detail on features, breakdown each feature
+- Detail how to install each dependency and virtual environment (pip installs)
+- Add visual aids for example commands
+- Explain concept of 'user index' and 'account index'
+- Explain common errors
+- Security disclaimer
+
+
+
