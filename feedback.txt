@@ -44,7 +44,26 @@ Date: 5/12/2024
      
 No action required from this feedback.
 
-3. 
+
+=======
+3.
+Specific documentation checked: ReadMe and Code Comments for main.py and colors.py
+Feedback given to: Declan W & Earvin
+Feedback provided by: Tilley
+Date of feedback: 03/12/2024
+Feedback Provided: 
+Your readme file looks good, you have explained the purpose and features of the application and steps to install python and clone from the repository.
+I think what is missing are the steps to install the libraries / packages for example, colored. Also any ethical considerations & standards.
+For your code comments in colored.py - I believe using the #comments are correct but I would maybe put it above the import line and maybe add the purpose of the import
+For the code comments, I'm not seeing the full code in main. What you have there explaining each code line is good.
+I don't see this in your code comment but just make sure you add comments to the classes and functions explaining the purpose, returned result and parameters / arguments.
+Actions to be complete:
+Update ReadMe to include installation for libararies / packages, dependencies and licenses and an ethical consideration & standards - since this a Bank Management system, you may want to consider the users privacy and look up PII
+Add code comments to classes and function explaining the purpose, returned result and parameter / arguements - for HD standar include code examples as well.
+>>>>>>> 4f9aa28ec3309b6f15ff8217226cc747fbd13992
+
+<<<<<<< HEAD
+4. 
 Feedback from: Chris
 What was checked: Both README and Code comments of main.py and colors.py
 Date: 6/12/2024
