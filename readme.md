@@ -1,5 +1,20 @@
 # Bank User Management System
 
+## Table of contents
+- [Bank User Management System](#bank-user-management-system)
+  - [Table of contents](#table-of-contents)
+  - [Description](#description)
+  - [Features](#features)
+  - [Installation Instructions](#installation-instructions)
+  - [Usage Instructions](#usage-instructions)
+    - [Example Commands](#example-commands)
+  - [Dependencies](#dependencies)
+    - [Python 3.x:](#python-3x)
+    - [colored:](#colored)
+  - [Author](#author)
+  - [Collaborators](#collaborators)
+  
+
 ## Description
 The Bank User Management System is a Python application that allows users to manage their bank accounts effectively. Users can create accounts, deposit and withdraw funds, view account details, and compound interest on their accounts.
 
@@ -46,7 +61,8 @@ The Bank User Management System is a Python application that allows users to man
   - Enter user index (e.g., 0 for John Doe) to display accounts.
 
 ## Dependencies
-### Python 3.x
+### Python 3.x: 
+Any version of Python 3 will suffice.
 
 ### colored:
   Official documentation: [colored](https://pypi.org/project/colored/)<br>
@@ -59,5 +75,3 @@ The Bank User Management System is a Python application that allows users to man
 
 ## Collaborators
 [Earvin Tumpao](https://github.com/earvin-tech)
-
-# bank-user-management-system
