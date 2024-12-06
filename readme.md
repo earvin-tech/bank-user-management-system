@@ -58,9 +58,24 @@ The Bank User Management System is a Python application that allows users to man
 ### Example Commands
 - **Deposit Funds:**
   - Choose action (1)
+  
+  ![deposit step 1](/images/deposit_feature1.png)
+
   - Enter user index (e.g., 0 for John Doe)
+  
+  ![deposit step 2](/images/deposit_feature2.png)
+
   - Enter account index (0 for checking)
+  
+  ![deposit step 3](/images/deposit_feature3.png) 
+
   - Enter amount to deposit (e.g., 500.00)
+  
+  ![deposit step 4](/images/deposit_feature4.png) 
+
+  - If successful you will get a message:
+  
+  ![deposit success](/images/deposit_feature5.png) 
 
 - **Withdraw Funds:**
   - Choose action (2)
@@ -77,7 +92,8 @@ The Bank User Management System is a Python application that allows users to man
 Any version of Python 3 will suffice.
 
 ### colored
-  Official documentation: [colored](https://pypi.org/project/colored/)<br>
+  Official documentation: [colored](https://pypi.org/project/colored/)
+
   An external library for color and formatting in terminal. For this project it will help differentiate and highlight some important user prompts, messages for errors, successful operations and outputs. 
 
   To install colored enter in the command line:
@@ -103,6 +119,7 @@ Any version of Python 3 will suffice.
  ```
 #### Output  
 ![colored example](/images/colored_example.png)
+
 Here the prompt we want to highlight is red.
 
 ## Author
