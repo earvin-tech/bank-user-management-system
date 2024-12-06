@@ -263,7 +263,7 @@ def main():
                 account_index = int(input(f"{propmt_color}Enter account index (0 for checking, 1 for savings):{reset} ")) 
                 amount = float(input(f"\n{propmt_color}Enter amount to withdraw:{reset} "))
                 clients[user_index].withdraw(amount, account_index) 
-                print(f"\n{successful_input_color}Withdrawal successful{reset}\n") 
+                # print(f"\n{successful_input_color}Withdrawal successful{reset}\n") 
             else:
                 print(f"{error_color}Invalid user index.{reset}\n") 
         elif action == "3": 
