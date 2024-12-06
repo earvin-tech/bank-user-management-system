@@ -6,6 +6,12 @@ from colors import error_color, reset, checking_account_color, saving_account_co
 '''
 The purpose of the account class is to store information such as balance of account, its ID, and account type. It's methods will perform operations on the balance.
 
+Attributes:
+- account_type: can be checking or savings
+- id: unique ID for the account
+- balance: Stores balance of the account
+- rate: determined depending on the account_type
+
 Methods: 
 - deposit: When called will add an amount user inputs to the current balance
 - withdraw: When called will subtract an amount user inputs from the current balance

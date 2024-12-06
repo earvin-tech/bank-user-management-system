@@ -32,6 +32,20 @@ The Bank User Management System is a Python application that allows users to man
    ```bash
    cd bank-user-management-system
    ```
+4. To use this app it requires external packages which should be run in a virtual environment. To create a virtual environment enter:
+   ```bash
+   python -m venv .venv
+   ```
+5. Activate the virtual environment:
+   ```bash
+   source .venv/bin/activate
+   ```
+6. Install all the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+  For more information about all the dependencies of the app or if you would like to install them individualy go to [dependencies](#dependencies).
+
 
 ## Usage Instructions
 1. Run the application by executing the following command in your terminal:
@@ -62,11 +76,34 @@ The Bank User Management System is a Python application that allows users to man
 ### Python 3.x: 
 Any version of Python 3 will suffice.
 
-### colored:
+### colored
   Official documentation: [colored](https://pypi.org/project/colored/)<br>
-  An external library for color and formatting in terminal. For this project it will help differentiate and highlight some important user prompts, messages for errors, successful operations and outputs.
-  
+  An external library for color and formatting in terminal. For this project it will help differentiate and highlight some important user prompts, messages for errors, successful operations and outputs. 
 
+  To install colored enter in the command line:
+  ```bash
+  pip install colored
+  ```
+ Make sure to have your [virtual environment](#installation-instructions) activated when doing this.
+
+ #### Usage
+ Colors are imported in a seperate module (colors.py) and then stored as f string to be called upon later
+ ```py
+ from colored import Fore, Back, Style
+
+ propmt_color: str = f"{Back.red}"
+ reset: str = f"{Style.reset}"
+ ```
+ In the main module (main.py) the strings are imported
+
+ ```py
+ from colors import prompt_color, reset
+
+ action = input(f"{propmt_color}Choose an action:{reset}\n(1) Deposit (2) Withdraw (3) Show Accounts (4) Add User (5) Exit:\n")
+ ```
+#### Output  
+![colored example](/images/colored_example.png)
+Here the prompt we want to highlight is red.
 
 ## Author
 [Declan Whitty](https://github.com/declan-whitty)# bank-user-management-system
