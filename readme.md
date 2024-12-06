@@ -3,6 +3,7 @@
 ## Table of contents
 - [Description](#description)
 - [Features](#features)
+- [Data Persistence](#data-persistence)
 - [Installation Instructions](#installation-instructions)
 - [Usage Instructions](#usage-instructions)
   - [Example Commands](#example-commands)
@@ -33,19 +34,19 @@ The Bank User Management System uses JSON files to persist user and account data
 - Saving Data: Any changes made during the session (e.g., deposits, withdrawals, adding new users) are saved back to users.json upon exiting the application.
 
 ### Key Functions for JSON Handling:
-**load_data(filename)**:
+- **load_data(filename)**:
   - Reads data from the users.json file.
   - If the file does not exist, an empty dataset is initialized.
-**save_data(data, filename)**:
+- **save_data(data, filename)**:
   - Writes user and account data into the users.json file in a structured, readable format.
-**convert_clients_to_json(clients)**:
+- **convert_clients_to_json(clients)**:
 - Converts User and Account objects into a JSON-compatible format for storage.
-**convert_json_to_clients(data)**:
+- **convert_json_to_clients(data)**:
 - Reads JSON data and reconstructs it into User and Account objects for application use.
 
 ### users.json Example:
 The following is a sample structure of the users.json file:
-
+```json
 [
     {
         "firstname": "John",
@@ -67,7 +68,7 @@ The following is a sample structure of the users.json file:
         ]
     }
 ]
-
+```
 ### Starting Fresh
 - If the users.json file is missing or contains invalid data, the application will notify the user and initialize an empty dataset.
 
