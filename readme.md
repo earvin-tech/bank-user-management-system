@@ -100,7 +100,17 @@ The Bank User Management System is a Python application that allows users to man
 
 - **Show Accounts:**
   - Choose action (3)
+  
+  ![show accounts step 1](/images/show_accounts_feature1.png)
+
   - Enter user index (e.g., 0 for John Doe) to display accounts.
+
+  ![](/images/show_accounts_feature2.png)
+
+  - User selected will have accounts displayed:
+
+  ![show accounts successful](/images/show_accounts_feature3.png)
+
 
 ## Dependencies
 ### Python 3.x: 
