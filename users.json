@@ -9,7 +9,7 @@
             {
                 "account_type": "checking",
                 "id": "000001",
-                "balance": 1500.0
+                "balance": 1600.0
             },
             {
                 "account_type": "savings",
@@ -33,7 +33,7 @@
             {
                 "account_type": "savings",
                 "id": "000004",
-                "balance": 8000.0
+                "balance": 7750.0
             }
         ]
     },

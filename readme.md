@@ -79,9 +79,24 @@ The Bank User Management System is a Python application that allows users to man
 
 - **Withdraw Funds:**
   - Choose action (2)
+  
+  ![withdraw step 1](/images/withdraw_feature1.png)
+
   - Enter user index (e.g., 1 for Sue Doe)
+  
+  ![withdraw setp 2](/images/withdraw_feature2.png)
+
   - Enter account index (1 for savings)
+  
+  ![withdraw step 3](/images/withdraw_feature3.png)
+
   - Enter amount to withdraw (e.g., 200.00)
+  
+  ![withdraw step 4](/images/withdraw_feature4.png)
+
+  - If successful you will get a message:
+
+  ![withdraw success](/images/withdraw_feature5.png)
 
 - **Show Accounts:**
   - Choose action (3)
