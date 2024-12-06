@@ -17,7 +17,14 @@
 ## Description
 The Bank User Management System is a Python application that allows users to manage their bank accounts effectively. Users can create accounts, deposit and withdraw funds, view account details, and compound interest on their accounts.
 
-**DISCLAIMER**: Please note that at this stage this app is only for educational purposes for developers and is not an official banking application. Do not provide any legitimate details in this application.
+## Ethical Considerations & Disclaimer
+
+This application handles valuable user assets and private information. While the data included in this project is clearly seeded as an example, if this application were used in a real-world scenario, it would require:
+
+- A robust privacy policy to outline how user data is handled and protected.
+- Additional security features to safeguard sensitive information, such as multi-factor authentication and secure data storage mechanisms.
+- Limiting access by ensuring account numbers alone are not sufficient for sensitive operations like deposits or withdrawals.
+This project is intended solely for educational purposes, and these ethical considerations should be addressed before using it in production.
 
 ## Features
 - User registration and account management
