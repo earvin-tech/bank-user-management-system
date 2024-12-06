@@ -24,6 +24,59 @@ The Bank User Management System is a Python application that allows users to man
 - Interest compounding for savings and checking accounts
 - User-friendly console interface
 
+## Data Persistence
+The Bank User Management System uses JSON files to persist user and account data across sessions. This ensures that user details and account balances are saved and accessible whenever the application is restarted.
+
+### How JSON Is Used
+- Data Storage: All user and account data is stored in a file named users.json.
+- Loading Data: When the application starts, it reads data from the users.json file.
+- Saving Data: Any changes made during the session (e.g., deposits, withdrawals, adding new users) are saved back to users.json upon exiting the application.
+
+### Key Functions for JSON Handling:
+**load_data(filename)**:
+  - Reads data from the users.json file.
+  - If the file does not exist, an empty dataset is initialized.
+**save_data(data, filename)**:
+  - Writes user and account data into the users.json file in a structured, readable format.
+**convert_clients_to_json(clients)**:
+- Converts User and Account objects into a JSON-compatible format for storage.
+**convert_json_to_clients(data)**:
+- Reads JSON data and reconstructs it into User and Account objects for application use.
+
+### users.json Example:
+The following is a sample structure of the users.json file:
+
+[
+    {
+        "firstname": "John",
+        "lastname": "Doe",
+        "dobm": 1,
+        "dobd": 15,
+        "doby": 1990,
+        "accounts": [
+            {
+                "account_type": "checking",
+                "id": "000001",
+                "balance": 1000.0
+            },
+            {
+                "account_type": "savings",
+                "id": "000002",
+                "balance": 5000.0
+            }
+        ]
+    }
+]
+
+### Starting Fresh
+- If the users.json file is missing or contains invalid data, the application will notify the user and initialize an empty dataset.
+
+### Adding or Replacing users.json:
+- To reset or manually add a new JSON file:
+1. Create a file named users.json in the project root directory.
+2. Ensure the structure follows the example provided above.
+
+
 ## Installation Instructions
 1. Ensure you have Python 3.x installed on your machine. You can download it from [python.org](https://www.python.org/downloads/).
 2. Clone this repository to your local machine using:
