@@ -24,6 +24,7 @@ This application handles valuable user assets and private information. While the
 - A robust privacy policy to outline how user data is handled and protected.
 - Additional security features to safeguard sensitive information, such as multi-factor authentication and secure data storage mechanisms.
 - Limiting access by ensuring account numbers alone are not sufficient for sensitive operations like deposits or withdrawals.
+
 This project is intended solely for educational purposes, and these ethical considerations should be addressed before using it in production.
 
 ## Features
@@ -173,6 +174,24 @@ The following is a sample structure of the users.json file:
   - User selected will have accounts displayed:
 
   ![show accounts successful](/images/show_accounts_feature3.png)
+
+- **Add User Function**
+The Add User feature allows you to register a new user by providing their first name, last name, and date of birth. Below are the steps to use this feature, along with visuals for reference.
+
+1. Choose the Add User Action:
+- When prompted to "Choose an action," select (4) for Add User.
+
+![add user step 1](/images/adduser_feature1.png)
+
+2. Enter User Details:
+- Fill in the required fields: first name, last name, birth month, day, and year.
+
+![add user step 2](/images/adduser_feature2.png)
+
+3. Success Confirmation:
+- A confirmation message will appear, indicating that the user has been successfully added.
+
+![add user step 3](/images/adduser_feature3.png)
 
 
 ## Dependencies
