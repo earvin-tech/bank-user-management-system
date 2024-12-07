@@ -44,8 +44,6 @@ Date: 5/12/2024
      
 No action required from this feedback.
 
-
-=======
 3.
 Specific documentation checked: ReadMe and Code Comments for main.py and colors.py
 Feedback given to: Declan W & Earvin
@@ -60,9 +58,7 @@ I don't see this in your code comment but just make sure you add comments to the
 Actions to be complete:
 Update ReadMe to include installation for libararies / packages, dependencies and licenses and an ethical consideration & standards - since this a Bank Management system, you may want to consider the users privacy and look up PII
 Add code comments to classes and function explaining the purpose, returned result and parameter / arguements - for HD standar include code examples as well.
->>>>>>> 4f9aa28ec3309b6f15ff8217226cc747fbd13992
 
-<<<<<<< HEAD
 4. 
 Feedback from: Chris
 What was checked: Both README and Code comments of main.py and colors.py
@@ -78,5 +74,26 @@ Action required:
 - Explain common errors
 - Security disclaimer
 
+5.
+Feedback from: Angus Cairns
+What was checked: Code and README
+Date: 6/12/2024
+    ISK Assessment 3 Feedback for Declan and
+    Earvin
 
+    1. Usefulness
 
+    Readme - Easy to follow and very straight forward setup from cloning
+
+    Features - menu was easy to follow
+    deposit - works flawlessly
+    withdraw -  works flawlessly
+    show accounts - works flawlessly
+
+    suggestions for future iterations
+
+    Add user - suggestion, please print the users index number after creation
+    transfer feature - maybe implement a feature to transfer between personal accounts
+    password account creation - when creating accounts include a password for data security, also a disclaimer for liability
+
+Action required: None. Already implemented in from previous feedback.

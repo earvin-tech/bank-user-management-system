@@ -49,7 +49,6 @@ class Account:
             # Prints if not valid amount
             print(f"\n{error_color}Invalid withdrawal amount.{reset}")
              
-
     def compound(self):
         # Multiplies rate to account
         self.balance *= self.rate 
