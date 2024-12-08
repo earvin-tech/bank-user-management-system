@@ -64,7 +64,7 @@ Feedback from: Chris
 What was checked: Both README and Code comments of main.py and colors.py
 Date: 6/12/2024
     
-    This piece of feed back is attached as a pdf named 'Feedback_from_Chris.pdf' in the main directory.
+    This piece of feed back is attached as a pdf named 'Feedback_from_Chris.pdf' in the feedback folder.
 
 Action required:
 - More detail on features, breakdown each feature
