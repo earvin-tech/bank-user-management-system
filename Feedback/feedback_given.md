@@ -26,3 +26,29 @@ Date: 2/12/2024
     Features of Application:
 
     The documentation does well to explain the individual functions within the app. It adds more detail about the general purpose of the app which is needed. Listing future functions to implement is very helpful for other developers.
+
+## Declan
+
+Specific documentation checked: ReadMe, main.py, and requirements.txt
+Feedback given to: Tilley & Declan
+Feedback provided by: Declan WhittyDate of feedback: 06/12/2024
+
+Feedback Provided
+
+Strengths:
+Well-structured Table of Contents and clear navigation.
+Installation steps and dependency details are comprehensive.
+Ethical considerations regarding licenses are well-documented.
+Code in main.py is functional, with meaningful outputs and well-written docstrings.
+
+Improvement Areas
+
+ReadMe:
+Add visual aids (e.g., screenshots or diagrams).
+main.py:
+Add inline comments for complex logic
+Clarify variable names for better readability.
+requirements.txt:
+Differentiate essential vs. optional dependencies.
+
+Ethical Concern: * Privacy of Conversion History: The application saves user conversion history locally. If not properly secured, this data could expose sensitive financial information. 
